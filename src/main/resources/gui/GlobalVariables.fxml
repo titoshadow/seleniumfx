@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1">
+    <center>
+        <ScrollPane focusTraversable="false" BorderPane.alignment="CENTER">
+            <content>
+                <GridPane fx:id="gridPaneVariableTable" hgap="10.0" pickOnBounds="false" vgap="7.5">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <padding>
+                        <Insets left="5.0" top="5.0" />
+                    </padding>
+                </GridPane>
+            </content>
+        </ScrollPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="20.0" BorderPane.alignment="CENTER">
+            <children>
+              <Button fx:id="buttonAddVariable" mnemonicParsing="false" onAction="#addGlobalVariable">
+               <graphic>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/sharp_add_black_24dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+                <Button fx:id="buttonDeleteAll" layoutX="217.0" layoutY="47.0" mnemonicParsing="false" onAction="#deleteAllGlobalVariables">
+                    <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../icons/baseline_delete_forever_black_24dp.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="buttonDelete" mnemonicParsing="false" onAction="#deleteSelectedGlobalVariables">
+                    <graphic>
+                        <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../icons/sharp_remove_black_24dp.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                </Button>
+                <Button fx:id="buttonSave" mnemonicParsing="false" onAction="#saveGlobalVariables" text="Save" />
+                <Button fx:id="buttonCancel" mnemonicParsing="false" onAction="#closeGlobalVariables" text="Cancel" />
+            </children>
+        </HBox>
+    </bottom>
+    <top>
+      <HBox alignment="CENTER" spacing="150.0" BorderPane.alignment="BOTTOM_LEFT">
+         <children>
+            <Label text="Global Variable" />
+            <Label text="Valor" />
+         </children>
+         <BorderPane.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </BorderPane.margin>
+      </HBox>
+    </top>
+</BorderPane>
